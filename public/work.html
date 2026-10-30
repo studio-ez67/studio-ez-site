@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work | studio ez</title>
+<meta name="description" content="Selected work by studio ez: gamification, branding, podcast production, content and illustration.">
+<meta name="theme-color" content="#EFECE3">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Work | studio ez">
+<meta property="og:description" content="Gamification, branding, podcast production, content and illustration from a Dhaka creative studio.">
+<meta property="og:image" content="https://studioez.org/images/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/prompt-500.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <nav aria-label="Main">
+    <a class="home" href="index.html" aria-label="studio ez, home"><img src="images/key-white.svg" alt="" width="30" height="30"></a>
+    <a href="work.html" aria-current="page">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+<div class="wrap">
+  <section class="work-head rise">
+    <h1>Selected work</h1>
+    <p>Games, brands, a podcast and the illustration behind them. Pick a project to see the details.</p>
+  </section>
+
+  <div class="filters rise" style="--d:.08s" id="filters" role="group" aria-label="Filter projects by type"></div>
+</div>
+<ul class="grid" id="grid"></ul>
+<noscript><p class="wrap">Turn on JavaScript to browse the projects.</p></noscript>
+</main>
+
+<dialog class="project" id="project" aria-labelledby="p-title">
+  <button class="p-close" id="p-close" type="button" aria-label="Close project">&times;</button>
+  <div class="p-inner">
+    <div class="p-text" id="p-text"></div>
+    <div class="p-gallery" id="p-gallery"></div>
+  </div>
+</dialog>
+
+<script src="projects.js"></script>
+<script src="work.js"></script>
+</body>
+</html>

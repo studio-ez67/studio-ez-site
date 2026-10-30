@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | studio ez</title>
+<meta name="description" content="Contact studio ez, a creative studio for strategy, design and advertising in Mohammadpur, Dhaka. Email studioez67@gmail.com or call +880 1355 330850.">
+<meta name="theme-color" content="#EFECE3">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact | studio ez">
+<meta property="og:description" content="Tell us what you are making. studio ez, Mohammadpur, Dhaka.">
+<meta property="og:image" content="https://studioez.org/images/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/prompt-500.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <nav aria-label="Main">
+    <a class="home" href="index.html" aria-label="studio ez, home"><img src="images/key-white.svg" alt="" width="30" height="30"></a>
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" aria-current="page">Contact</a>
+  </nav>
+</header>
+
+<main id="main" class="wrap">
+  <section class="about-head rise">
+    <h1>Tell us what you are making.</h1>
+    <p class="lede">A creative studio for strategy, design &amp; advertising. Send a brief, a question or just a hello.</p>
+  </section>
+
+  <section class="contact-grid rise" style="--d:.08s" aria-label="Contact details">
+    <article class="ccard">
+      <h2>Email</h2>
+      <a class="line" href="mailto:studioez67@gmail.com?subject=Project%20enquiry">studioez67@gmail.com</a>
+      <button class="keybtn" type="button" data-copy="studioez67@gmail.com" data-label="Copy email">Copy email</button>
+    </article>
+    <article class="ccard">
+      <h2>Phone</h2>
+      <a class="line" href="tel:+8801355330850">+880 1355 330850</a>
+      <button class="keybtn" type="button" data-copy="+880 1355 330850" data-label="Copy number">Copy number</button>
+    </article>
+    <article class="ccard">
+      <h2>Studio</h2>
+      <address>3/1, Salimullah Rd., Block-D, Mohammadpur, Dhaka-1207</address>
+      <a class="keybtn" href="https://www.google.com/maps/search/?api=1&amp;query=3%2F1%20Salimullah%20Rd%2C%20Block-D%2C%20Mohammadpur%2C%20Dhaka%201207" target="_blank" rel="noopener">Open in Maps</a>
+    </article>
+  </section>
+
+  <section class="enquiry rise" style="--d:.16s" aria-labelledby="enq-h">
+    <h2 id="enq-h">Send a project brief</h2>
+    <form id="enquiry" novalidate>
+      <div class="row2">
+        <p><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></p>
+        <p><label for="f-from">Your email or phone</label><input id="f-from" name="from" autocomplete="email"></p>
+      </div>
+      <fieldset>
+        <legend>What do you need?</legend>
+        <div class="kcs">
+          <label class="kc"><input type="checkbox" name="need" value="Brand identity and strategy"><span>Brand identity and strategy</span></label>
+          <label class="kc"><input type="checkbox" name="need" value="UX/UI design"><span>UX/UI design</span></label>
+          <label class="kc"><input type="checkbox" name="need" value="Gamification"><span>Gamification</span></label>
+          <label class="kc"><input type="checkbox" name="need" value="Motion and video"><span>Motion and video</span></label>
+          <label class="kc"><input type="checkbox" name="need" value="Podcast production"><span>Podcast production</span></label>
+          <label class="kc"><input type="checkbox" name="need" value="Content production"><span>Content production</span></label>
+        </div>
+      </fieldset>
+      <p><label for="f-msg">Tell us about the project</label><textarea id="f-msg" name="msg" rows="6" required></textarea></p>
+      <p class="actions"><button class="btn btn-dark" type="submit">Open in my email app</button></p>
+      <p class="status" id="f-status" role="status" aria-live="polite"></p>
+      <p class="note">This opens your email app with the message filled in, ready to send. Nothing is sent from this page.</p>
+    </form>
+  </section>
+
+  <footer class="foot">&copy; 2026 studio ez. Dhaka, Bangladesh.</footer>
+</main>
+
+<script src="contact.js"></script>
+</body>
+</html>

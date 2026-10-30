@@ -3,17 +3,73 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>studio ez</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
-<style>
-  body{margin:0;min-height:100vh;display:grid;place-items:center;background:#EB5E28;font-family:'Prompt',sans-serif;color:#2C2324}
-  .pill{background:rgba(239,236,227,.85);padding:2rem 3.5rem;border-radius:999px;text-align:center}
-  h1{margin:0;font-weight:700;font-size:clamp(2rem,6vw,4rem)}
-  p{margin:.5rem 0 0;font-family:'Press Start 2P',monospace;font-size:16px}
-</style>
+<title>studio ez | A creative studio for strategy, design &amp; advertising</title>
+<meta name="description" content="studio ez is a Dhaka-based creative studio for strategy, design and advertising: brand identity, UX/UI, gamification, motion and video, and content production.">
+<meta name="theme-color" content="#2C2324">
+<meta property="og:type" content="website">
+<meta property="og:title" content="studio ez | A creative studio for strategy, design &amp; advertising">
+<meta property="og:description" content="Brand identity, UX/UI, gamification, motion and content.">
+<meta property="og:image" content="https://studioez.org/images/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/prompt-500.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script>
+/* Show the start page once per visit. Skipped when the visitor prefers reduced motion. */
+try {
+  if (!sessionStorage.getItem("ez-intro") && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document.documentElement.classList.add("intro");
+  }
+} catch (e) {}
+</script>
 </head>
-<body>
-  <div class="pill"><h1>studio ez</h1><p>COMING SOON</p></div>
+<body class="home">
+
+<!-- START PAGE: only the logo. It pops up, the key presses itself down, the site opens from the key -->
+<div class="intro-screen" id="intro" aria-hidden="true">
+  <div class="intro-wrap">
+    <img src="images/logo-word-white.svg" alt="">
+    <div class="key-layer" id="key-layer"><img src="images/logo-key-white.svg" alt=""></div>
+  </div>
+</div>
+<div class="intro-ring" id="intro-ring" aria-hidden="true"></div>
+
+<div class="site" id="site">
+  <a class="skip" href="#stage">Skip to content</a>
+
+  <header class="nav">
+    <nav aria-label="Main">
+      <a class="home" href="index.html" aria-label="studio ez, home" aria-current="page"><img src="images/key-white.svg" alt="" width="30" height="30"></a>
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="stage" id="stage">
+    <ul class="orbit" id="orbit" aria-label="Selected projects"></ul>
+    <div class="centre">
+      <h1 class="mark" aria-label="studio ez">
+        <img class="mark-word" src="images/logo-word-ink.svg" alt="" width="593" height="212">
+        <img class="mark-key" src="images/logo-key-ink.svg" alt="" width="593" height="212">
+      </h1>
+      <p class="tagline">A creative studio for strategy, design &amp; advertising.</p>
+      <p class="services-line">Brand identity, UX/UI, gamification, motion and content</p>
+      <a class="btn btn-dark" href="work.html">See all work</a>
+    </div>
+  </main>
+
+  <button class="pause" id="pause" type="button" aria-pressed="false">Pause motion</button>
+
+  <noscript>
+    <div class="noscript"><p>Turn on JavaScript to see the moving project tiles, or <a href="work.html"><strong>see all work</strong></a>.</p></div>
+  </noscript>
+</div>
+
+<script src="projects.js"></script>
+<script src="orbit.js"></script>
+<script src="intro.js"></script>
 </body>
 </html>
