@@ -80,7 +80,8 @@ body.home { background: var(--cream); overflow: hidden; height: 100vh; height: 1
 .site { position: fixed; inset: 0; z-index: 10; background: var(--cream); }
 /* texture: the supplied pattern at 2% opacity, tiled at 0.3x its original 720px size (216px) */
 .site::before { content: ""; position: absolute; inset: 0; background: var(--tex) 0 0 / 216px 216px repeat; opacity: .02; pointer-events: none; }
-.stage { position: absolute; inset: 0; z-index: 1; --tw: clamp(92px, 13.5vw, 184px); }
+.stage { position: absolute; inset: 0; z-index: 1; --tw: clamp(104px, 15vw, 200px); cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none; }
+.stage.is-dragging, .stage.is-dragging * { cursor: grabbing !important; }
 .orbit { list-style: none; margin: 0; padding: 0; }
 .orbit li { position: absolute; left: 0; top: 0; width: var(--tw); will-change: transform; }
 
@@ -104,14 +105,22 @@ body.home { background: var(--cream); overflow: hidden; height: 100vh; height: 1
 }
 .key:hover .tag, .key:focus-visible .tag, .is-open .tag { opacity: 1; }
 .key:focus-visible { outline: 3px solid var(--ink); outline-offset: 5px; }
+.key, .key img { -webkit-user-drag: none; }
+.stage.is-dragging .key:hover .cap, .stage.is-dragging .key:focus-visible .cap {
+  transform: none; box-shadow: 0 14px 24px -12px rgba(44, 35, 36, .5);
+}
+.stage.is-dragging .key:hover .tag, .stage.is-dragging .key:focus-visible .tag { opacity: 0; }
 
 .centre {
   position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 200;
   width: min(94vw, 640px); text-align: center; color: var(--ink); pointer-events: none;
 }
-.centre::before {
-  content: ""; position: absolute; inset: -34px -8%; z-index: -1;
-  background: radial-gradient(ellipse at center, var(--cream) 0 46%, rgba(239, 236, 227, 0) 72%);
+/* a tight ivory outline hugging the letters and logo (no wide glow), so the cards can pass close behind the text */
+.centre .tagline, .centre .services-line {
+  text-shadow: 0 0 2px var(--cream), 0 0 2px var(--cream), 0 0 3px var(--cream), 0 0 3px var(--cream), 0 0 5px var(--cream);
+}
+.centre .mark img {
+  filter: drop-shadow(0 0 1.5px var(--cream)) drop-shadow(0 0 1.5px var(--cream)) drop-shadow(0 0 3px var(--cream));
 }
 .centre p { margin: 0; white-space: nowrap; line-height: 1.4; }
 .centre .tagline { font-weight: 700; font-size: clamp(.72rem, 3vw, 1.2rem); letter-spacing: -.005em; }

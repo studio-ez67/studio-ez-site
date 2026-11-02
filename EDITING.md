@@ -25,6 +25,13 @@ GitHub keeps every version. Open the file, click History, and restore the last g
 - The start page (the key presses itself, then the site opens) shows once per visit. It is controlled by `public/intro.js`; the timing of the automatic press is the number `1700` (milliseconds) in that file.
 - The background texture is `public/images/texture.png`, shown at 2% opacity, tiled at 216px. Change `opacity: .02` in `public/style.css` (the `body::before` and `.site::before` rules) to make it stronger or weaker.
 
+## The wheel on the landing page
+- You can spin it by dragging (mouse or finger); let go and it coasts, then drifts again on its own. The cursor on a card still stops it. All of this is in `public/orbit.js`.
+- Card size: `--tw` in the `.stage` rule of `public/style.css` (the width) and `BASE` in `public/orbit.js` (the scale). Bigger numbers make bigger cards; they overlap a little when the screen is small.
+- Drift speed: `TURN` in `orbit.js` is the seconds for one full turn. How long a flick coasts: the `2.2` in `coast *= Math.exp(-dt * 2.2)` (smaller coasts longer).
+- The "ez" key in the middle logo is `public/images/logo-key-reversed.svg` (brown key, ivory outline and letters). It is a separate file so `tools/tighten_wordmark.py` does not overwrite it.
+- The ivory outline around the middle logo and text is the `filter` / `text-shadow` on `.centre` in `style.css`. Make the numbers smaller for a thinner outline.
+
 ## Previewing on your own computer (no GitHub needed)
 
 Double-click `studio-ez-standalone.html`. It is the whole site in one file (all pages and photos inside it).
