@@ -39,7 +39,7 @@ window.PROJECTS = [
     outcome: "A playable browser game with 16 scenes, 6 cinematic videos and 12 character animation sequences, delivered in 3 days. Showcased at the Revenue Conference 2026 on 18 August 2026.",
     did: ["Game design", "UI design", "Character animation", "Cinematic video", "HTML build"],
     cover: "images/gta-1.jpg",
-    tiles: ["images/t-gta-1.jpg", "images/t-gta-2.jpg"],
+    tiles: ["images/t-gta-1.jpg", "images/t-gta-2.jpg", "images/t-gta-8.jpg"],
     images: [
       ["images/gta-1.jpg", "Title screen of Grand Tax Auto with a glowing blue city and a start button"],
       ["images/gta-8.jpg", "Illustrated arcade cabinet outside a neon arcade, its screen reading Press Start"],
@@ -63,7 +63,7 @@ window.PROJECTS = [
     outcome: "Page engagement grew over 60% while we ran its branding and campaigns (figure taken from the page's Meta Business Suite dashboard).",
     did: ["Brand identity", "Campaign visuals", "Social content"],
     cover: "images/chilirig-1.jpg",
-    tiles: ["images/t-chilirig-1.jpg", "images/t-chilirig-2.jpg"],
+    tiles: ["images/t-chilirig-1.jpg", "images/t-chilirig-2.jpg", "images/t-chilirig-5.jpg"],
     images: [
       ["images/chilirig-1.jpg", "ChiliRig chili oil jars surrounded by flying chilies and curved headline text"],
       ["images/chilirig-5.jpg", "Ramadan Kareem offer for ChiliRig, 15% off, with a jar, baskets of chilies and mosque silhouettes"],
@@ -101,7 +101,7 @@ window.PROJECTS = [
     outcome: "",
     did: ["Product photography", "Brand applications", "Social content"],
     cover: "images/content-1.jpg",
-    tiles: ["images/t-content-1.jpg"],
+    tiles: ["images/t-content-1.jpg", "images/t-content-3.jpg"],
     images: [
       ["images/content-1.jpg", "Perfume bottle labelled Brandy Designs, Saffron Noir, with a ring and a chain on a dark surface"],
       ["images/content-2.jpg", "Hands holding a blue notebook against a shadowed wall"],
@@ -137,7 +137,7 @@ window.PROJECTS = [
     outcome: "",
     did: ["Illustration", "Concept art"],
     cover: "images/illus-5.jpg",
-    tiles: ["images/t-illus-5.jpg"],
+    tiles: ["images/t-illus-5.jpg", "images/t-illus-7.jpg"],
     images: [
       ["images/illus-5.jpg", "Illustrated school tug-of-war on a sports field, a red team against a blue team"],
       ["images/illus-6.jpg", "Illustrated schoolchildren in uniform in a schoolyard with a Bangladesh flag and a mango tree"],
@@ -158,7 +158,7 @@ window.PROJECTS = [
     outcome: "",
     did: ["Concept sketches", "Rendering"],
     cover: "images/sketch-3.jpg",
-    tiles: ["images/t-sketch-3.jpg"],
+    tiles: ["images/t-sketch-3.jpg", "images/t-sketch-2.jpg"],
     images: [
       ["images/sketch-3.jpg", "Rendered view of a timber pavilion among trees"],
       ["images/sketch-1.jpg", "Section drawing of a forest landscape with soil layers"],
@@ -176,7 +176,7 @@ window.PROJECTS = [
     outcome: "A complete brand guideline covering research and positioning, logo system, palette, typography, imagery style, applications and guest touchpoints.",
     did: ["Research and positioning", "Logo system", "Palette and typography", "Imagery style", "Brand applications"],
     cover: "images/serenity-1.jpg",
-    tiles: ["images/t-serenity-1.jpg", "images/t-serenity-2.jpg"],
+    tiles: ["images/t-serenity-1.jpg", "images/t-serenity-2.jpg", "images/t-serenity-3.jpg"],
     images: [
       ["images/serenity-1.jpg", "Serenity Suites logo on a red interlocking pattern"],
       ["images/serenity-8.jpg", "Serenity Suites napkin band in red with the logo and pattern on black cloth"],

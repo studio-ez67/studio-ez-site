@@ -80,7 +80,7 @@ body.home { background: var(--cream); overflow: hidden; height: 100vh; height: 1
 .site { position: fixed; inset: 0; z-index: 10; background: var(--cream); }
 /* texture: the supplied pattern at 2% opacity, tiled at 0.3x its original 720px size (216px) */
 .site::before { content: ""; position: absolute; inset: 0; background: var(--tex) 0 0 / 216px 216px repeat; opacity: .02; pointer-events: none; }
-.stage { position: absolute; inset: 0; z-index: 1; --tw: clamp(104px, 15vw, 200px); cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none; }
+.stage { position: absolute; inset: 0; z-index: 1; --tw: clamp(104px, min(15vw, 21vh), 200px); cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none; }
 .stage.is-dragging, .stage.is-dragging * { cursor: grabbing !important; }
 .orbit { list-style: none; margin: 0; padding: 0; }
 .orbit li { position: absolute; left: 0; top: 0; width: var(--tw); will-change: transform; }
@@ -129,7 +129,14 @@ body.home { background: var(--cream); overflow: hidden; height: 100vh; height: 1
 
 /* the logo: the key presses itself down every 2 seconds */
 .mark { position: relative; display: block; width: min(300px, 62%); aspect-ratio: 592.56 / 212; margin: 0 auto 14px; }
+.mark { container-type: inline-size; }
 .mark img { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+/* "studio" in Press Start 2P: 6 letters = 6em, so 9.6cqw makes the word about 58% of the logo width, left of the key */
+.mark-word {
+  position: absolute; left: 0; top: 52%; transform: translateY(-50%);
+  font-family: var(--pixel); font-weight: 400; font-size: 9.6cqw; line-height: 1; letter-spacing: 0; color: var(--ink); white-space: nowrap;
+  text-shadow: 0 0 1.5px var(--cream), 0 0 1.5px var(--cream), 0 0 3px var(--cream);
+}
 .mark-key { transform-origin: 81.5% 100%; }
 html:not(.intro) .mark-key { animation: keypress 2s infinite; }
 @keyframes keypress {
@@ -282,6 +289,15 @@ dialog.project::backdrop { background: rgba(44, 35, 36, .78); }
 }
 .services li:hover { background: var(--orange); transform: translateY(3px); box-shadow: 0 2px 0 var(--ink); }
 .services { gap: 14px 10px; padding-bottom: 6px; }
+
+/* ABOUT: second font (Press Start 2P) for the tagline and the "What we make" boxes */
+.about .about-head h1 { max-width: none; font-size: clamp(2.2rem, 5.6vw, 5rem); }
+.about .about-head .lede { max-width: none; font-family: var(--pixel); font-weight: 400; font-size: clamp(.6rem, 1.7vw, .95rem); line-height: 1.8; letter-spacing: 0; }
+.about .services li { font-family: var(--pixel); font-weight: 400; font-size: .68rem; line-height: 1.5; padding: 11px 16px 9px; }
+@media (max-width: 720px) {
+  .about .about-head h1 { max-width: 18ch; }
+  .about .about-head h1 .br-wide { display: none; }   /* on phones the title wraps by itself */
+}
 .band { background: var(--ink); color: var(--cream); border-radius: 36px; padding: 48px clamp(24px, 5vw, 64px); margin-bottom: 56px; }
 .band h2 { margin: 0 0 28px; font-size: clamp(1.8rem, 4vw, 3rem); letter-spacing: -.02em; line-height: 1.05; }
 .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; counter-reset: s; }
