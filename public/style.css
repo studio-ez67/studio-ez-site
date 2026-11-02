@@ -124,19 +124,14 @@ body.home { background: var(--cream); overflow: hidden; height: 100vh; height: 1
 }
 .centre p { margin: 0; white-space: nowrap; line-height: 1.4; }
 .centre .tagline { font-weight: 700; font-size: clamp(.72rem, 3vw, 1.2rem); letter-spacing: -.005em; }
-.centre .services-line { margin-top: 6px; font-weight: 400; font-size: clamp(.68rem, 2.5vw, .98rem); color: var(--taupe); }
+.centre .services-line { margin-top: 6px; position: relative; top: -3px; font-weight: 400; font-size: clamp(.68rem, 2.5vw, .98rem); color: var(--taupe); }
 .centre .btn { margin-top: 20px; pointer-events: auto; }
 
 /* the logo: the key presses itself down every 2 seconds */
 .mark { position: relative; display: block; width: min(300px, 62%); aspect-ratio: 592.56 / 212; margin: 0 auto 14px; }
-.mark { container-type: inline-size; }
 .mark img { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-/* "studio" in Press Start 2P: 6 letters = 6em, so 9.6cqw makes the word about 58% of the logo width, left of the key */
-.mark-word {
-  position: absolute; left: 0; top: 52%; transform: translateY(-50%);
-  font-family: var(--pixel); font-weight: 400; font-size: 9.6cqw; line-height: 1; letter-spacing: 0; color: var(--ink); white-space: nowrap;
-  text-shadow: 0 0 1.5px var(--cream), 0 0 1.5px var(--cream), 0 0 3px var(--cream);
-}
+/* the outlined "studio" sits on the bottom edge of the keycap: its baseline is moved down by 35% of the logo height (measured from the SVGs) */
+.mark-word { transform: translateY(35%); }
 .mark-key { transform-origin: 81.5% 100%; }
 html:not(.intro) .mark-key { animation: keypress 2s infinite; }
 @keyframes keypress {
