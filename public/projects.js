@@ -22,6 +22,8 @@
     outcome   the result (leave "" to hide)
     did       list of what studio ez did
     cover     the image used on the work page card
+    focus     optional: where the work page card crops a tall photo, as "left top",
+              e.g. "50% 20%" keeps the upper part. Leave the line out to centre it.
     tiles     small images that orbit on the landing page. Make them with
               python3 tools/make_tiles.py (it makes the small t- copies)
     images    all images shown inside the project window
@@ -202,6 +204,23 @@ window.PROJECTS = [
     tiles: ["images/t-theway-1.jpg"],
     images: [
       ["images/theway-1.jpg", "Outdoor billboard concept in green and gold: The way to experience Dhaka"]
+    ]
+  },
+  {
+    id: "oishee",
+    title: "Oishee Sushee",
+    type: "Photography",
+    client: "",
+    year: "",
+    summary: "A portrait photography project.",
+    brief: "",
+    outcome: "",
+    did: ["Photography"],
+    cover: "images/oishee-1.jpg",
+    focus: "50% 22%",
+    tiles: ["images/t-oishee-1.jpg"],
+    images: [
+      ["images/oishee-1.jpg", "Portrait of a woman in a red embroidered outfit with gold jewelry and henna on her hands, looking down"]
     ]
   }
 ];

@@ -31,6 +31,7 @@
     var shot = el("span", "shot");
     var img = el("img");
     img.src = p.cover; img.alt = ""; img.loading = "lazy"; img.decoding = "async";
+    if (p.focus) img.style.objectPosition = p.focus;
     img.width = 800; img.height = 600;
     var badge = el("span", "badge", p.type);
     var over = el("span", "over");
