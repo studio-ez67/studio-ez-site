@@ -205,22 +205,5 @@ window.PROJECTS = [
     images: [
       ["images/theway-1.jpg", "Outdoor billboard concept in green and gold: The way to experience Dhaka"]
     ]
-  },
-  {
-    id: "oishee",
-    title: "Oishee Sushee",
-    type: "Photography",
-    client: "",
-    year: "",
-    summary: "A portrait photography project.",
-    brief: "",
-    outcome: "",
-    did: ["Photography"],
-    cover: "images/oishee-1.jpg",
-    focus: "50% 22%",
-    tiles: ["images/t-oishee-1.jpg"],
-    images: [
-      ["images/oishee-1.jpg", "Portrait of a woman in a red embroidered outfit with gold jewelry and henna on her hands, looking down"]
-    ]
   }
 ];
